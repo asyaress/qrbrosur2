@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poster Display</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2e8c6;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px; /* Jarak antar container */
+            height: 100vh;
+        }
+
+        .poster-container, .qr-container {
+            background-color: #ffffff;
+            border: 2px solid #d9cdbf;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+
+            /* Animasi */
+            opacity: 0; /* Awal transparan */
+            transform: translateY(30px); /* Awal di bawah */
+            animation: fadeInSlideUp 1.2s ease-out forwards; /* Animasi muncul */
+        }
+
+        .poster-container img {
+            width: 150px; /* Gambar memenuhi lebar container */
+            height: auto; /* Jaga proporsi asli gambar */
+            border-radius: 4px;
+            object-fit: contain; /* Hindari pemotongan gambar */
+        }
+
+        .qr-container img {
+            width: 150px; /* Ukuran QR Code */
+            height: auto;
+            border-radius: 4px;
+            object-fit: contain;
+        }
+        .qr-container p {
+            margin-top: 10px;
+            font-size: 1em;
+            color: #000000;
+            text-decoration: none;
+            color: #000000;
+            font-weight: bold;
+        }
+
+        .poster-title {
+            margin-top: 10px;
+            
+            font-size: 1em;
+            color: #000000;
+        }
+
+        .poster-title a {
+            text-decoration: none;
+            color: #000000;
+            font-weight: bold;
+        }
+
+
+        /* Keyframes untuk animasi */
+        @keyframes fadeInSlideUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="qr-container">
+        <img src="./asset/qrbrosur.svg" alt="QR Code">
+        <p>Scan disini untuk membuka brosur</p>
+    </div>
+    <!-- Poster Container -->
+    <div class="poster-container">
+        <img src="./asset/tes.jpg" alt="Poster Image">
+        <div class="poster-title">
+            <a href="https://drive.google.com/file/d/1mI7pmGLgNiDhvfs6TJ40544xS887lBR4/view?usp=drive_link" target="_blank">
+                © 2024 Toedjoe Sinar Group Programming Team
+
+            </a>
+        </div>
+    </div>
+
+    <!-- QR Code Container -->
+    
+</body>
+</html>
